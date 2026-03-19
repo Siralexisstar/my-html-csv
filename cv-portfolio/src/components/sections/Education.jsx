@@ -7,7 +7,7 @@ export const Education = () => {
   const educationList = [
     {
       id: 'ifp',
-      degree: 'Ciclo Superior. Programador, Desarrollo de aplicaciones multiplataforma y desarrollo web.',
+      degree: 'Higher National Diploma in Multi-platform and Web Application Development',
       institution: 'iFP - Grupo Planeta',
       duration: 'Feb 2021 - Feb 2023',
       initials: 'iFP',
@@ -15,15 +15,15 @@ export const Education = () => {
     },
     {
       id: 'ub',
-      degree: 'Grado en Geología',
-      institution: 'Universitat de Barcelona',
+      degree: 'Bachelor\'s Degree in Geology',
+      institution: 'University of Barcelona',
       duration: 'Sep 2014 - Aug 2019',
       initials: 'UB',
       color: '#3b82f6' // blue
     },
     {
       id: 'ies',
-      degree: 'Bachillerato Científico-Tecnológico',
+      degree: 'High School Diploma in Science and Technology',
       institution: 'IES Frederic Mompou Barcelona',
       duration: '2016 - 2018',
       initials: 'IES',
