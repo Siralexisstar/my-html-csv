@@ -1,15 +1,15 @@
 :root {
-  /* Colors */
-  --color-bg: #0f172a;
-  --color-text: #e5e7eb;
-  --color-text-muted: #94a3b8;
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
-  --color-surface: #1e293b;
-  --color-surface-hover: #334155;
+  /* Colors - Aggressive Hacker Theme (Dark & Red/Green accents) */
+  --color-bg: #050505;
+  --color-text: #e0e0e0;
+  --color-text-muted: #888888;
+  --color-primary: #ff003c; /* Cyberpunk Red */
+  --color-primary-hover: #ff3366;
+  --color-surface: #111111;
+  --color-surface-hover: #1a1a1a;
 
-  /* Typography */
-  --font-family-base: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Typography - Hacker Monospace */
+  --font-family-base: "Fira Code", "Share Tech Mono", Consolas, monospace;
   
   /* Spacing */
   --spacing-xs: 4px;
@@ -19,13 +19,13 @@
   --spacing-xl: 32px;
   --spacing-xxl: 48px;
 
-  /* BorderRadius */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
+  /* BorderRadius - Sharper for aggressive look */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
   --radius-full: 9999px;
 
   /* Transitions */
-  --transition-fast: 150ms ease-in-out;
-  --transition-base: 250ms ease-in-out;
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

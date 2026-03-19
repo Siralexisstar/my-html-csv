@@ -9,6 +9,12 @@ html {
   font-family: var(--font-family-base);
   font-size: 16px;
   background-color: var(--color-bg);
+  /* Hacker grid background pattern */
+  background-image: 
+    linear-gradient(rgba(255, 0, 60, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 60, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
   color: var(--color-text);
   line-height: 1.5;
   scroll-behavior: smooth;
