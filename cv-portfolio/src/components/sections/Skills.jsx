@@ -72,13 +72,13 @@ export const Skills = () => {
     { id: 'udemy-jms', title: 'Java Message Service', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
     { id: 'udemy-spark', title: 'Apache Spark for Java Developers', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
     { id: 'udemy-batch', title: 'Batch Processing (Spring Batch)', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
-    { id: 'udemy-lambdas', title: 'Lambdas y Streams en Java', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
-    { id: 'udemy-bigdata', title: 'Big Data y Spark: ingeniería de datos con Python y pyspark', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
+    { id: 'udemy-lambdas', title: 'Lambdas and Streams in Java', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
+    { id: 'udemy-bigdata', title: 'Big Data and Spark: data engineering with Python and PySpark', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
     { id: 'udemy-jms-mvc', title: 'Java Messaging Service - Spring MVC, Spring Boot, ActiveMQ', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' }
   ];
 
   const certifications = [
-    { id: 'coderhouse-react', title: 'React Js Flex', issuer: 'Coderhouse', color: '#f59e0b', initials: 'CH' }
+    { id: 'coderhouse-react', title: 'React Js Flex', issuer: 'Coderhouse', ref: '66d5913a6f2e9cd3ca041dbb', color: '#f59e0b', initials: 'CH' }
   ];
 
   const handleToggle = (name) => {
@@ -88,7 +88,7 @@ export const Skills = () => {
   return (
     <Section id="skills" title="Skills, Courses & Certifications" className="skills-section">
       <div className="skills-layout-vertical">
-        
+
         {/* 1. Skills Accordion */}
         <div className="skills-accordion">
           <h3 className="section-subtitle">SKILLS</h3>
@@ -124,7 +124,9 @@ export const Skills = () => {
                   <h4 className="course-title">{course.title.toUpperCase()}</h4>
                   <p className="course-issuer">{course.issuer}</p>
                 </div>
-                <div className="course-logo" style={{ color: course.color }}>{course.initials}</div>
+                <div className="course-logo">
+                  <img src="/images/udemy.png" alt="Udemy Logo" style={{ height: '36px', objectFit: 'contain', opacity: 0.9 }} />
+                </div>
               </div>
             ))}
           </div>
@@ -139,8 +141,11 @@ export const Skills = () => {
                 <div>
                   <h4 className="course-title">{cert.title.toUpperCase()}</h4>
                   <p className="course-issuer">{cert.issuer}</p>
+                  <p className="course-ref">{cert.ref}</p>
                 </div>
-                <div className="course-logo" style={{ color: cert.color }}>{cert.initials}</div>
+                <div className="course-logo">
+                  <img src="/images/coderhouse.png" alt="Coderhouse Logo" style={{ height: '36px', objectFit: 'contain', opacity: 0.9 }} />
+                </div>
               </div>
             ))}
           </div>

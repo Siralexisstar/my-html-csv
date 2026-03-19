@@ -11,6 +11,7 @@ export const Education = () => {
       institution: 'iFP - Grupo Planeta',
       duration: 'Feb 2021 - Feb 2023',
       initials: 'iFP',
+      logo: '/images/descarga.png',
       color: '#0ea5e9' // sky blue
     },
     {
@@ -19,6 +20,7 @@ export const Education = () => {
       institution: 'University of Barcelona',
       duration: 'Sep 2014 - Aug 2019',
       initials: 'UB',
+      logo: '/images/UB.png',
       color: '#3b82f6' // blue
     },
     {
@@ -27,6 +29,7 @@ export const Education = () => {
       institution: 'IES Frederic Mompou Barcelona',
       duration: '2016 - 2018',
       initials: 'IES',
+      logo: '/images/Logo-FredericMompou.png',
       color: '#10b981' // emerald
     }
   ];
@@ -36,8 +39,12 @@ export const Education = () => {
       <div className="education__list">
         {educationList.map((edu) => (
           <Card key={edu.id} className="education__card">
-            <div className="education__thumbnail" style={{ borderColor: edu.color }}>
-              <span className="education__initials" style={{ color: edu.color }}>{edu.initials}</span>
+            <div className="education__thumbnail" style={{ borderColor: edu.color, overflow: 'hidden', padding: edu.logo ? '6px' : '0', backgroundColor: edu.logo ? '#fff' : 'var(--color-bg)' }}>
+              {edu.logo ? (
+                <img src={edu.logo} alt={`${edu.institution} logo`} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              ) : (
+                <span className="education__initials" style={{ color: edu.color }}>{edu.initials}</span>
+              )}
             </div>
             <div className="education__content">
               <div className="education__header">
