@@ -1,0 +1,46 @@
+.contact {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.contact__wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact__desc {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.contact__socials {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.contact__link {
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.contact__link:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+/* Footer styles typically align here if not separated */
+.footer {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,35 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xxl);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about__text p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.about__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.about__placeholder-img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  border: 2px dashed var(--color-primary);
+}
