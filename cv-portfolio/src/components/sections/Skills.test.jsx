@@ -30,7 +30,7 @@ describe('Skills Component', () => {
 
   it('renders the courses and certifications carousels', () => {
     render(<Skills />);
-    expect(screen.getByRole('heading', { name: /courses \(finished\)/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /certifications/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^courses \(finished\)$/i, level: 3 })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^certifications$/i, level: 3 })).toBeInTheDocument();
   });
 });
