@@ -8,18 +8,23 @@ export const About = () => {
       <div className="about__grid">
         <div className="about__text">
           <div className="about__bio">
-            <h3 className="about__subheading">Biography & Continuous Learning</h3>
+            <h3 className="about__subheading">Biography</h3>
             <p>
-              Hi, I'm Alejandro. I am a versatile Software Engineer with a passion for building fully integrated digital solutions. Originally starting in systems and backend engineering, I've expanded my expertise across the entire stack—delivering resilient microservices and engaging React-based frontends. 
+              Hi, I'm Alejandro. Originally from Barcelona. I am a versatile Software Engineer with a passion for building
+              fully integrated digital solutions.
+              Originally starting in systems and backend engineering,
+              I've expanded my expertise across the entire stack—delivering resilient microservices and engaging React-based frontends.
             </p>
             <p>
-              Beyond my daily professional work, my passion for technology drives me to constantly innovate, study, and learn. I am always striving to stay up to date with the latest technologies, frameworks, and architectural patterns to continuously evolve as an engineer.
+              Beyond my daily professional work, my passion for technology drives me to constantly innovate, study, and learn.
+              I am always striving to stay up to date with the latest technologies, frameworks, and architectural patterns to continuously evolve as an engineer.
             </p>
           </div>
           <div className="about__interests">
             <h3 className="about__subheading">Lifestyle & Interests</h3>
             <p>
-              Outside of programming, I dedicate a massive part of my free time to sports, specifically <strong>CrossFit</strong>. Training hard and competing is more than just a hobby—it's a lifestyle that strengthens my mindset. It helps me stay ambitious, disciplined, and perseverant in chasing both my professional and personal goals.
+              Outside of programming, I dedicate a massive part of my free time to sports, specifically <strong>CrossFit</strong>.
+              Training hard and competing is more than just a hobby—it's a lifestyle that strengthens my mindset. It helps me stay ambitious, disciplined, and perseverant in chasing both my professional and personal goals.
             </p>
             <p>
               When I need to disconnect from the daily grind, there's nothing I enjoy more than spending quality time with my dog, going to the beach, and taking long outdoors walks to reset my mind.
