@@ -1,44 +1,179 @@
-.skills__container {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xl);
-  max-width: 800px;
+.skills-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xxl);
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.skills__group {
-  background-color: var(--color-surface);
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
+@media (min-width: 900px) {
+  .skills-layout {
+    grid-template-columns: 1fr 400px;
+  }
 }
 
-.skills__category {
+/* Accordion Area */
+.skills-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.accordion-item {
+  border: 1px solid rgba(255, 0, 60, 0.2);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-family: var(--font-family-base);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.accordion-header:hover {
+  background-color: rgba(255, 0, 60, 0.1);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0 var(--spacing-lg);
+}
+
+.accordion-item.is-open .accordion-body {
+  max-height: 500px; /* arbitrary high value for transition */
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.skill-row {
+  margin-bottom: var(--spacing-md);
+}
+
+.skill-row:last-child {
+  margin-bottom: 0;
+}
+
+.skill-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.9rem;
+}
+
+.skill-name {
+  color: var(--color-text);
+}
+
+.skill-percent {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.skill-bar-bg {
+  width: 100%;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width 1s ease-out;
+}
+
+/* Sidebar Area */
+.skills-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 600px; /* Fixed height for scrollable area */
+}
+
+.sidebar-title {
   font-size: 1.25rem;
   color: var(--color-primary);
   margin-bottom: var(--spacing-md);
-  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.skills__list {
+.courses-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: var(--spacing-md);
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--spacing-lg);
 }
 
-.skills__item {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--radius-md);
-  font-weight: 500;
-  font-size: 0.875rem;
-  border: 1px solid var(--color-surface-hover);
-  transition: all var(--transition-fast);
+/* Custom Scrollbar for Hacker Style */
+.courses-list::-webkit-scrollbar {
+  width: 4px;
 }
 
-.skills__item:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  transform: translateY(-2px);
+.courses-list::-webkit-scrollbar-track {
+  background: rgba(255, 0, 60, 0.1);
+}
+
+.courses-list::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+.course-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.course-item:last-child {
+  border-bottom: none;
+}
+
+.course-bullet {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-text);
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.course-info {
+  flex-grow: 1;
+}
+
+.course-title {
+  font-size: 0.95rem;
+  color: #fff;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.course-issuer {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.course-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  opacity: 0.8;
 }
