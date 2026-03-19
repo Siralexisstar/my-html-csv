@@ -24,10 +24,10 @@ export const Hero = () => {
         </div>
         <div className="hero__image-container">
           <div className="hero__image-wrapper">
-            <img 
-              src="/profile_avatar.png" 
-              alt="Alejandro García Villar" 
-              className="hero__profile-img" 
+            <img
+              src="/images/profileImg.jpeg"
+              alt="Alejandro García Villar"
+              className="hero__profile-img"
             />
           </div>
         </div>

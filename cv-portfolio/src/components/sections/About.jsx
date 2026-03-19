@@ -10,7 +10,7 @@ export const About = () => {
           <div className="about__bio">
             <h3 className="about__subheading">Biography</h3>
             <p>
-              Hi, I'm Alejandro. I am a versatile Software Engineer with a passion for building fully integrated digital solutions. Originally starting in systems and backend engineering, I've expanded my expertise across the entire stack—delivering resilient microservices and engaging React-based frontends. 
+              Hi, I'm Alejandro. I am a versatile Software Engineer with a passion for building fully integrated digital solutions. Originally starting in systems and backend engineering, I've expanded my expertise across the entire stack—delivering resilient microservices and engaging React-based frontends.
             </p>
             <p>
               My philosophy centers around scalability, clean architecture, and continuous learning. Whether it's orchestrating complex data pipelines on GCP or crafting pixel-perfect UI components, I view every layer of the stack as critical to the final product.
@@ -25,8 +25,8 @@ export const About = () => {
         </div>
         <div className="about__visual">
           <div className="about__photo-grid">
-            <img src="/dev_setup.png" alt="Developer setup" className="about__photo about__photo--main" />
-            <img src="/hobby_nature.png" alt="Outdoor hobbies" className="about__photo about__photo--secondary" />
+            <img src="/images/profileImg.jpeg" alt="Developer setup" className="about__photo about__photo--main" />
+            <img src="/images/hobby_nature.png" alt="Outdoor hobbies" className="about__photo about__photo--secondary" />
           </div>
         </div>
       </div>
