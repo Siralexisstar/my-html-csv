@@ -65,17 +65,20 @@ export const Skills = () => {
     }
   ];
 
-  const certs = [
-    { id: 'coderhouse-react', title: 'React Js Flex', issuer: 'Coderhouse', color: '#f59e0b' },
-    { id: 'udemy-testing', title: 'Master Java Unit Testing with Spring Boot & Mockito', issuer: 'Udemy Alumni', color: '#a855f7' },
-    { id: 'udemy-swagger', title: 'Learn Swagger and the OpenAPI Specification', issuer: 'Udemy Alumni', color: '#a855f7' },
-    { id: 'udemy-tdd', title: 'Practical Test Driven Development', issuer: 'Udemy Alumni', color: '#a855f7' },
-    { id: 'udemy-jms', title: 'Java Message Service', issuer: 'Udemy Alumni', color: '#a855f7' },
-    { id: 'udemy-spark', title: 'Apache Spark for Java Developers', issuer: 'Udemy Alumni', color: '#a855f7' },
-    { id: 'udemy-batch', title: 'Batch Processing (Spring Batch)', issuer: 'Udemy Alumni', color: '#a855f7' },
-    { id: 'udemy-lambdas', title: 'Lambdas y Streams en Java', issuer: 'Udemy Alumni', color: '#a855f7' },
-    { id: 'udemy-bigdata', title: 'Big Data y Spark: ingeniería de datos con Python y pyspark', issuer: 'Udemy Alumni', color: '#a855f7' },
-    { id: 'udemy-jms-mvc', title: 'Java Messaging Service - Spring MVC, Spring Boot, ActiveMQ', issuer: 'Udemy Alumni', color: '#a855f7' }
+  const courses = [
+    { id: 'udemy-testing', title: 'Master Java Unit Testing with Spring Boot & Mockito', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
+    { id: 'udemy-swagger', title: 'Learn Swagger and the OpenAPI Specification', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
+    { id: 'udemy-tdd', title: 'Practical Test Driven Development', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
+    { id: 'udemy-jms', title: 'Java Message Service', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
+    { id: 'udemy-spark', title: 'Apache Spark for Java Developers', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
+    { id: 'udemy-batch', title: 'Batch Processing (Spring Batch)', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
+    { id: 'udemy-lambdas', title: 'Lambdas y Streams en Java', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
+    { id: 'udemy-bigdata', title: 'Big Data y Spark: ingeniería de datos con Python y pyspark', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' },
+    { id: 'udemy-jms-mvc', title: 'Java Messaging Service - Spring MVC, Spring Boot, ActiveMQ', issuer: 'Udemy Alumni', color: '#a855f7', initials: 'UD' }
+  ];
+
+  const certifications = [
+    { id: 'coderhouse-react', title: 'React Js Flex', issuer: 'Coderhouse', color: '#f59e0b', initials: 'CH' }
   ];
 
   const handleToggle = (name) => {
@@ -83,9 +86,12 @@ export const Skills = () => {
   };
 
   return (
-    <Section id="skills" title="Skills & Certifications" className="skills-section">
-      <div className="skills-layout">
+    <Section id="skills" title="Skills, Courses & Certifications" className="skills-section">
+      <div className="skills-layout-vertical">
+        
+        {/* 1. Skills Accordion */}
         <div className="skills-accordion">
+          <h3 className="section-subtitle">SKILLS</h3>
           {categories.map((cat) => (
             <div key={cat.name} className={`accordion-item ${openCategory === cat.name ? 'is-open' : ''}`}>
               <button className="accordion-header" onClick={() => handleToggle(cat.name)}>
@@ -108,23 +114,38 @@ export const Skills = () => {
           ))}
         </div>
 
-        <div className="skills-sidebar">
-          <h3 className="sidebar-title">COURSES & CERTIFICATES</h3>
-          <div className="courses-list">
-            {certs.map(cert => (
-              <div key={cert.id} className="course-item">
-                <span className="course-bullet"></span>
-                <div className="course-info">
-                  <h4 className="course-title">{cert.title.toUpperCase()}</h4>
-                  <p className="course-issuer">{cert.issuer}</p>
+        {/* 2. Courses Horizontal Carousel */}
+        <div className="carousel-section">
+          <h3 className="section-subtitle">COURSES (FINISHED)</h3>
+          <div className="carousel-container">
+            {courses.map(course => (
+              <div key={course.id} className="carousel-card">
+                <div>
+                  <h4 className="course-title">{course.title.toUpperCase()}</h4>
+                  <p className="course-issuer">{course.issuer}</p>
                 </div>
-                <div className="course-logo" style={{ color: cert.color }}>
-                  {cert.issuer === 'Udemy Alumni' ? 'U' : 'CH'}
-                </div>
+                <div className="course-logo" style={{ color: course.color }}>{course.initials}</div>
               </div>
             ))}
           </div>
         </div>
+
+        {/* 3. Certifications Horizontal Carousel */}
+        <div className="carousel-section">
+          <h3 className="section-subtitle">CERTIFICATIONS</h3>
+          <div className="carousel-container">
+            {certifications.map(cert => (
+              <div key={cert.id} className="carousel-card">
+                <div>
+                  <h4 className="course-title">{cert.title.toUpperCase()}</h4>
+                  <p className="course-issuer">{cert.issuer}</p>
+                </div>
+                <div className="course-logo" style={{ color: cert.color }}>{cert.initials}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </Section>
   );
