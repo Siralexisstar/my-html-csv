@@ -5,6 +5,8 @@ export const Navbar = () => {
   const navItems = [
     { label: 'Home', href: '#top' },
     { label: 'About me', href: '#about' },
+    { label: 'Education', href: '#education' },
+    { label: 'Certifications', href: '#certifications' },
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },

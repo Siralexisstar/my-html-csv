@@ -1,19 +1,53 @@
 import React from 'react';
 import { Section } from '../layout/Section';
 import { Card } from '../ui/Card';
+import './Education.css';
 
 export const Education = () => {
+  const educationList = [
+    {
+      id: 'ifp',
+      degree: 'Ciclo Superior. Programador, Desarrollo de aplicaciones multiplataforma y desarrollo web.',
+      institution: 'iFP - Grupo Planeta',
+      duration: 'Feb 2021 - Feb 2023',
+      initials: 'iFP',
+      color: '#0ea5e9' // sky blue
+    },
+    {
+      id: 'ub',
+      degree: 'Grado en Geología',
+      institution: 'Universitat de Barcelona',
+      duration: 'Sep 2014 - Aug 2019',
+      initials: 'UB',
+      color: '#3b82f6' // blue
+    },
+    {
+      id: 'ies',
+      degree: 'Bachillerato Científico-Tecnológico',
+      institution: 'IES Frederic Mompou Barcelona',
+      duration: '2016 - 2018',
+      initials: 'IES',
+      color: '#10b981' // emerald
+    }
+  ];
+
   return (
     <Section id="education" title="Education">
-      <div style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)' }}>
-        <Card>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 'var(--spacing-sm)' }}>
-            <h3 style={{ color: 'var(--color-primary)', fontSize: '1.25rem', margin: 0 }}>Computer Engineering Degree</h3>
-            <span style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem' }}>2017 - 2021</span>
-          </div>
-          <h4 style={{ color: '#fff', fontSize: '1.125rem', marginBottom: 'var(--spacing-md)', fontWeight: 500 }}>University of Example</h4>
-          <p style={{ margin: 0, color: 'var(--color-text-muted)' }}>Foundational studies in computer science, software engineering, and networking. [Placeholder data]</p>
-        </Card>
+      <div className="education__list">
+        {educationList.map((edu) => (
+          <Card key={edu.id} className="education__card">
+            <div className="education__thumbnail" style={{ borderColor: edu.color }}>
+              <span className="education__initials" style={{ color: edu.color }}>{edu.initials}</span>
+            </div>
+            <div className="education__content">
+              <div className="education__header">
+                <h3 className="education__degree">{edu.degree}</h3>
+                <span className="education__duration">{edu.duration}</span>
+              </div>
+              <h4 className="education__institution">{edu.institution}</h4>
+            </div>
+          </Card>
+        ))}
       </div>
     </Section>
   );
