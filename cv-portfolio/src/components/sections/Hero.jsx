@@ -15,7 +15,8 @@ export const Hero = () => {
           </h1>
           <h2 className="hero__subtitle">Software Engineer (Backend and Frontend)</h2>
           <p className="hero__summary">
-            Specialized in crafting scalable, responsive, and robust web applications with modern technologies. Bridging the gap between reliable backends and premium frontend experiences.
+            Software Engineer specialized in designing and building scalable, high-performance web applications using modern technologies.
+            Strong focus on end-to-end development, seamlessly integrating robust backend systems with intuitive, high-quality frontend experiences.
           </p>
           <div className="hero__actions">
             <Button as="a" href="#contact" variant="primary" size="lg">Get in touch</Button>
