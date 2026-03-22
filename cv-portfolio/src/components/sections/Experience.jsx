@@ -1,4 +1,4 @@
-import React from 'react';
+import { Briefcase } from 'lucide-react';
 import { Section } from '../layout/Section';
 import './Experience.css';
 
@@ -103,7 +103,7 @@ export const Experience = () => {
   ];
 
   return (
-    <Section id="experience" title="Experience" icon="# ls experience">
+    <Section id="experience" title="Experience" icon={<Briefcase size={28} />}>
       <div className="timeline">
         {experiences.map((org, orgIndex) => (
           <div key={orgIndex} className="timeline__group">

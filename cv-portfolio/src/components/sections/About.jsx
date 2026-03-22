@@ -1,10 +1,10 @@
-import React from 'react';
+import { User } from 'lucide-react';
 import { Section } from '../layout/Section';
 import './About.css';
 
 export const About = () => {
   return (
-    <Section id="about" title="About Me" icon="# whoami" className="about">
+    <Section id="about" title="About Me" icon={<User size={28} />} className="about">
       <div className="about__grid">
         <div className="about__text">
           <div className="about__bio">

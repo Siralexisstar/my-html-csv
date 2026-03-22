@@ -1,11 +1,11 @@
-import React from 'react';
+import { Send } from 'lucide-react';
 import { Section } from '../layout/Section';
 import { Button } from '../ui/Button';
 import './Contact.css';
 
 export const Contact = () => {
   return (
-    <Section id="contact" title="Get In Touch" icon="# ping contact" className="contact">
+    <Section id="contact" title="Get In Touch" icon={<Send size={28} />} className="contact">
       <div className="contact__wrapper">
         <p className="contact__desc">
           I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!

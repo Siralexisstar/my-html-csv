@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Terminal } from 'lucide-react';
 import { Section } from '../layout/Section';
 import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
@@ -9,26 +10,23 @@ export const Projects = () => {
     {
       id: 1,
       category: '// FRONTEND',
-      title: 'URBANSTORE E-COMMERCE',
-      description: 'A feature-rich e-commerce platform. Implemented dynamic product catalogs, secure checkout simulations, and state management using React Context and Hooks.',
+      title: 'BANK UI',
+      description: 'Development of modern banking user interfaces focused on performance, usability, and scalability. Implementation of complex business logic, validations, and data visualizations (charts) to enhance user experience. Integration with backend services through secure APIs and gateways, ensuring smooth communication with Java Spring WebFlux microservices. Deployed on GCP with CI/CD pipelines using GitHub Actions.',
       tech: ['React', 'Vite', 'CSS Modules', 'JavaScript', 'Context API'],
-      link: 'https://github.com/Siralexisstar/React-Store-Certification',
     },
     {
       id: 2,
-      category: '// WEB TOOLS',
-      title: 'CSV-TO-WEB DATA VIEWER',
-      description: 'A high-performance data visualization tool that transforms raw CSV files into an interactive UI. Optimized for speed and responsiveness.',
-      tech: ['React', 'Vite', 'Vercel', 'TypeScript', 'CSV Parsing'],
-      link: 'https://github.com/Siralexisstar/my-html-csv',
+      category: '// MICROSERVICES',
+      title: 'BANK MICROSERVICES',
+      description: 'Design and development of scalable, event-driven microservices for banking systems using Java and Spring WebFlux. Implementation of reactive architectures, ensuring high performance and non-blocking data processing. Integration with BigQuery for data persistence and analytics. Full testing strategy including unit and integration tests (JUnit, Mockito). Deployment on GCP with automated CI/CD pipelines via GitHub Actions.',
+      tech: ['Spring Boot', 'WebFlux', 'Java', 'JUnit', 'Mockito', 'BigQuery', 'GitHub Actions', 'CI/CD'],
     },
     {
       id: 3,
-      category: '// BACKEND',
-      title: 'HEXAFLOW ENGINE',
-      description: 'A reactive microservice architected with Spring Boot WebFlux. Employs Hexagonal Architecture and DDD to handle asynchronous data pipelines.',
-      tech: ['Spring Boot', 'WebFlux', 'Hexagonal Architecture', 'DDD', 'MongoDB'],
-      link: '#',
+      category: '// IA',
+      title: 'IA',
+      description: 'Design and implementation of automation workflows for business processes using n8n. Integration of external services and APIs to orchestrate end-to-end automated solutions. Deployment and management of Docker-based environments on dedicated servers (Hetzner, Coolify). Development of scalable automation systems, including integrations with platforms such as WhatsApp Business API.',
+      tech: ['N8N', 'Docker', 'Coolify', 'Hetzner', 'JAVASCRIPT', 'META', 'WHATSAPP BUSINESS API'],
     }
   ];
 
@@ -49,7 +47,7 @@ export const Projects = () => {
   }, []);
 
   return (
-    <Section id="projects" title="Featured Projects" icon="# ./projects">
+    <Section id="projects" title="Featured Projects" icon={<Terminal size={28} />}>
       <div className="projects__grid">
         {projects.map(project => (
           <Card key={project.id} className="projects__card">
@@ -60,9 +58,6 @@ export const Projects = () => {
               {project.tech.map(t => (
                 <span key={t} className="projects__tag">{t}</span>
               ))}
-            </div>
-            <div className="projects__actions">
-              <Button as="a" href={project.link} variant="outline" size="sm">View Project</Button>
             </div>
           </Card>
         ))}

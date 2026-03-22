@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Cpu } from 'lucide-react';
 import { Section } from '../layout/Section';
 import './Skills.css';
 
@@ -91,7 +92,7 @@ export const Skills = () => {
   };
 
   return (
-    <Section id="skills" title="Skills, Courses & Certifications" icon="# grep skills" className="skills-section">
+    <Section id="skills" title="Skills, Courses & Certifications" icon={<Cpu size={28} />} className="skills-section">
       <div className="skills-layout-vertical">
 
         {/* 1. Skills Accordion */}

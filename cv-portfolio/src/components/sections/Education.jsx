@@ -1,4 +1,4 @@
-import React from 'react';
+import { Book } from 'lucide-react';
 import { Section } from '../layout/Section';
 import { Card } from '../ui/Card';
 import './Education.css';
@@ -35,7 +35,7 @@ export const Education = () => {
   ];
 
   return (
-    <Section id="education" title="Education" icon="# cat education">
+    <Section id="education" title="Education" icon={<Book size={28} />}>
       <div className="education__list">
         {educationList.map((edu) => (
           <Card key={edu.id} className="education__card">

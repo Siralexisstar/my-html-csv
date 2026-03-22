@@ -21,14 +21,14 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Education />
+        <Skills />
         <Experience />
         <Projects />
-        <Skills />
+        <Education />
         <Contact />
       </main>
       <footer className="footer">
-        <p>© {new Date().getFullYear()} Alejandro García Villar. Built with React & Vite.</p>
+        <p>© {new Date().getFullYear()} Alejandro García Villar. Built with React and Antigravity.</p>
       </footer>
     </>
   );
