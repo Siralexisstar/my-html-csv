@@ -5,12 +5,14 @@ import { Skills } from './Skills';
 import { describe, it, expect } from 'vitest';
 
 describe('Skills Component', () => {
-  it('renders the main skills categories accordion headers', () => {
+  it('renders the main tech stack and professional profile headers', () => {
     render(<Skills />);
-    expect(screen.getByRole('heading', { name: /skills, courses & certifications/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /tech stack & professional profile/i })).toBeInTheDocument();
     
+    expect(screen.getByRole('heading', { name: /technical skills/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /soft skills & dna/i })).toBeInTheDocument();
+
     expect(screen.getByRole('button', { name: /programming languages/i })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /ddbb/i })).toBeInTheDocument();
   });
 
   it('toggles the accordion category when clicked', async () => {

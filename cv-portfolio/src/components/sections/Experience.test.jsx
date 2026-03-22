@@ -11,8 +11,8 @@ describe('Experience Component', () => {
 
   it('displays the correct past companies as headings', () => {
     render(<Experience />);
-    expect(screen.getByRole('heading', { name: /gft deutschland/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /grupo gft/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /gft for deutsche bank/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /gft group/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /adtel/i })).toBeInTheDocument();
   });
 
