@@ -42,8 +42,45 @@
 
 .about__visual {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--spacing-xl);
   align-items: center;
+}
+
+.about__dna {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-surface);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 0, 60, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about__chart-container {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Add a glowing effect to the chart container */
+.about__chart-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: var(--color-primary);
+  filter: blur(100px);
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .about__gallery {
