@@ -1,18 +1,8 @@
 import { User } from 'lucide-react';
 import { Section } from '../layout/Section';
-import { RadarChart } from '../ui/RadarChart';
 import './About.css';
 
 export const About = () => {
-  const profileData = [
-    { label: 'Ambicioso', value: 90 },
-    { label: 'Trabajador', value: 95 },
-    { label: 'Colaborador', value: 85 },
-    { label: 'Resolutivo', value: 90 },
-    { label: 'Líder', value: 80 },
-    { label: 'Aprendizaje', value: 95 },
-  ];
-
   return (
     <Section id="about" title="About Me" icon={<User size={28} />} className="about">
       <div className="about__grid">
@@ -37,12 +27,6 @@ export const About = () => {
           </div>
         </div>
         <div className="about__visual">
-          <div className="about__dna">
-            <h3 className="about__subheading">Professional DNA</h3>
-            <div className="about__chart-container">
-              <RadarChart data={profileData} size={320} />
-            </div>
-          </div>
           <div className="about__gallery">
             <div className="about__image-container">
               <img src="/images/crossfit1.jpeg" alt="CrossFit Training" className="about__img" />

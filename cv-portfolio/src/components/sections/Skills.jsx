@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
 import { Cpu } from 'lucide-react';
 import { Section } from '../layout/Section';
+import { RadarChart } from '../ui/RadarChart';
 import './Skills.css';
 
 export const Skills = () => {
   const [openCategory, setOpenCategory] = useState('Programming Languages');
 
+  const profileData = [
+    { label: 'Ambitious', value: 90 },
+    { label: 'Hard-working', value: 95 },
+    { label: 'Collaborative', value: 85 },
+    { label: 'Problem-solving', value: 90 },
+    { label: 'Leadership', value: 80 },
+    { label: 'Learning', value: 95 },
+  ];
+
   const categories = [
+    // ... (same categories as before)
     {
       name: 'Programming Languages',
       skills: [
@@ -92,35 +103,46 @@ export const Skills = () => {
   };
 
   return (
-    <Section id="skills" title="Skills, Courses & Certifications" icon={<Cpu size={28} />} className="skills-section">
+    <Section id="skills" title="Tech Stack & Professional Profile" icon={<Cpu size={28} />} className="skills-section">
       <div className="skills-layout-vertical">
 
-        {/* 1. Skills Accordion */}
-        <div className="skills-accordion">
-          <h3 className="section-subtitle">SKILLS</h3>
-          {categories.map((cat) => (
-            <div key={cat.name} className={`accordion-item ${openCategory === cat.name ? 'is-open' : ''}`}>
-              <button className="accordion-header" onClick={() => handleToggle(cat.name)}>
-                {cat.name}
-              </button>
-              <div className="accordion-body">
-                {cat.skills.map(skill => (
-                  <div key={skill.name} className="skill-row">
-                    <div className="skill-labels">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percent">{skill.level}%</span>
+        {/* Top Grid: Skills + Professional DNA */}
+        <div className="skills-top-grid">
+          {/* 1. Skills Accordion */}
+          <div className="skills-accordion">
+            <h3 className="section-subtitle">TECHNICAL SKILLS</h3>
+            {categories.map((cat) => (
+              <div key={cat.name} className={`accordion-item ${openCategory === cat.name ? 'is-open' : ''}`}>
+                <button className="accordion-header" onClick={() => handleToggle(cat.name)}>
+                  {cat.name}
+                </button>
+                <div className="accordion-body">
+                  {cat.skills.map(skill => (
+                    <div key={skill.name} className="skill-row">
+                      <div className="skill-labels">
+                        <span className="skill-name">{skill.name}</span>
+                        <span className="skill-percent">{skill.level}%</span>
+                      </div>
+                      <div className="skill-bar-bg">
+                        <div className="skill-bar-fill" style={{ width: `${skill.level}%` }}></div>
+                      </div>
                     </div>
-                    <div className="skill-bar-bg">
-                      <div className="skill-bar-fill" style={{ width: `${skill.level}%` }}></div>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
+            ))}
+          </div>
+
+          {/* 2. Professional DNA (Radar Chart) */}
+          <div className="skills-visual">
+            <h3 className="section-subtitle">SOFT SKILLS & DNA</h3>
+            <div className="skills-dna-card">
+              <RadarChart data={profileData} size={300} />
             </div>
-          ))}
+          </div>
         </div>
 
-        {/* 2. Courses Horizontal Carousel */}
+        {/* 3. Courses Horizontal Carousel */}
         <div className="carousel-section">
           <h3 className="section-subtitle">COURSES (FINISHED)</h3>
           <div className="carousel-container">

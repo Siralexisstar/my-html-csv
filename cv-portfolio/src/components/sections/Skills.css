@@ -14,11 +14,58 @@
   letter-spacing: 1px;
 }
 
-/* Accordion Area */
+/* Top Grid Area */
+.skills-top-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxl);
+}
+
+@media (min-width: 900px) {
+  .skills-top-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--spacing-xxl);
+    align-items: flex-start;
+  }
+}
+
 .skills-accordion {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+}
+
+.skills-visual {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-dna-card {
+  background-color: var(--color-surface);
+  border: 1px solid rgba(255, 0, 60, 0.15);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-dna-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: var(--color-primary);
+  filter: blur(80px);
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 .accordion-item {
