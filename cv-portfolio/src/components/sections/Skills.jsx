@@ -91,7 +91,7 @@ export const Skills = () => {
   };
 
   return (
-    <Section id="skills" title="Skills, Courses & Certifications" className="skills-section">
+    <Section id="skills" title="Skills, Courses & Certifications" icon="# grep skills" className="skills-section">
       <div className="skills-layout-vertical">
 
         {/* 1. Skills Accordion */}

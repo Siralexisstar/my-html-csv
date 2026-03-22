@@ -35,7 +35,7 @@ export const Education = () => {
   ];
 
   return (
-    <Section id="education" title="Education">
+    <Section id="education" title="Education" icon="# cat education">
       <div className="education__list">
         {educationList.map((edu) => (
           <Card key={edu.id} className="education__card">

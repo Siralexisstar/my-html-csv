@@ -103,7 +103,7 @@ export const Experience = () => {
   ];
 
   return (
-    <Section id="experience" title="Experience">
+    <Section id="experience" title="Experience" icon="# ls experience">
       <div className="timeline">
         {experiences.map((org, orgIndex) => (
           <div key={orgIndex} className="timeline__group">

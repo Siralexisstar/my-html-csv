@@ -7,17 +7,29 @@
   font-size: clamp(2rem, 4vw, 2.5rem);
   text-align: center;
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
   left: 50%;
   transform: translateX(-50%);
+  width: fit-content;
+}
+
+.section__icon {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  opacity: 0.8;
 }
 
 .section__title::after {
   content: '';
   position: absolute;
   bottom: -8px;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
   height: 4px;
   background-color: var(--color-primary);
   border-radius: var(--radius-full);

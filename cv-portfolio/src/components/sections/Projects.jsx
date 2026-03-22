@@ -8,22 +8,25 @@ export const Projects = () => {
   const projects = [
     {
       id: 1,
+      category: '// FRONTEND',
       title: 'URBANSTORE E-COMMERCE',
-      description: 'A feature-rich e-commerce platform developed for Coderhouse certification. Implemented dynamic product catalogs, secure checkout simulations, and state management using React Context and Hooks.',
+      description: 'A feature-rich e-commerce platform. Implemented dynamic product catalogs, secure checkout simulations, and state management using React Context and Hooks.',
       tech: ['React', 'Vite', 'CSS Modules', 'JavaScript', 'Context API'],
       link: 'https://github.com/Siralexisstar/React-Store-Certification',
     },
     {
       id: 2,
+      category: '// WEB TOOLS',
       title: 'CSV-TO-WEB DATA VIEWER',
-      description: 'UI to visualize CSV in a web page using Antigravity and other tools to improve the UI. Optimized for speed and responsiveness, and deployed as a serverless application on Vercel.',
+      description: 'A high-performance data visualization tool that transforms raw CSV files into an interactive UI. Optimized for speed and responsiveness.',
       tech: ['React', 'Vite', 'Vercel', 'TypeScript', 'CSV Parsing'],
       link: 'https://github.com/Siralexisstar/my-html-csv',
     },
     {
       id: 3,
-      title: 'HEXAFLOW ENGINE (IN PROGRESS)',
-      description: 'A cutting-edge reactive microservice architected with Spring Boot WebFlux. Employs Hexagonal Architecture and Domain-Driven Design (DDD) to handle massive asynchronous data pipelines, integrated with MongoDB.',
+      category: '// BACKEND',
+      title: 'HEXAFLOW ENGINE',
+      description: 'A reactive microservice architected with Spring Boot WebFlux. Employs Hexagonal Architecture and DDD to handle asynchronous data pipelines.',
       tech: ['Spring Boot', 'WebFlux', 'Hexagonal Architecture', 'DDD', 'MongoDB'],
       link: '#',
     }
@@ -46,10 +49,11 @@ export const Projects = () => {
   }, []);
 
   return (
-    <Section id="projects" title="Featured Projects">
+    <Section id="projects" title="Featured Projects" icon="# ./projects">
       <div className="projects__grid">
         {projects.map(project => (
           <Card key={project.id} className="projects__card">
+            <div className="projects__category">{project.category}</div>
             <h3 className="projects__title">{project.title}</h3>
             <p className="projects__desc">{project.description}</p>
             <div className="projects__tech">
