@@ -9,58 +9,63 @@ export const Skills = () => {
     {
       name: 'Programming Languages',
       skills: [
-        { name: 'Java', level: 90 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'SQL / PLSQL', level: 80 },
-        { name: 'Python', level: 60 }
+        { name: 'Java', level: 85 },
+        { name: 'JavaScript', level: 60 },
+        { name: 'TypeScript', level: 60 },
+        { name: 'Python', level: 50 },
+        { name: 'SQL / PLSQL', level: 40 },
+        { name: 'HTML', level: 90 },
+        { name: 'CSS', level: 80 },
       ]
     },
     {
       name: 'DDBB',
       skills: [
-        { name: 'Oracle', level: 85 },
-        { name: 'MySQL / PostgreSQL', level: 80 },
-        { name: 'BigQuery', level: 75 }
+        { name: 'Oracle', level: 60 },
+        { name: 'MySQL / PostgreSQL', level: 60 },
+        { name: 'MongoDB', level: 40 },
+        { name: 'BigQuery', level: 80 }
       ]
     },
     {
       name: 'Back-End Frameworks',
       skills: [
-        { name: 'Spring Boot', level: 90 },
-        { name: 'Spring Batch', level: 85 },
-        { name: 'Spring MVC', level: 80 }
+        { name: 'Spring Boot', level: 70 },
+        { name: 'Spark', level: 60 },
+        { name: 'Spring WebFlux', level: 50 },
       ]
     },
     {
       name: 'Front-End',
       skills: [
-        { name: 'React', level: 80 },
-        { name: 'HTML5 / CSS3', level: 85 },
+        { name: 'React', level: 70 },
         { name: 'Thymeleaf', level: 70 }
       ]
     },
     {
       name: 'Infrastructure & Containers',
       skills: [
-        { name: 'Docker', level: 75 },
-        { name: 'Kubernetes (GKE)', level: 65 },
-        { name: 'Networking / Routing', level: 80 }
+        { name: 'Docker', level: 50 },
+        { name: 'Kubernetes (GKE)', level: 20 },
+        { name: 'OpenShift', level: 20 },
+        { name: 'RabbitMQ', level: 50 }
       ]
     },
     {
       name: 'DevOps & Cloud',
       skills: [
-        { name: 'GCP (Dataflow, Pub/Sub)', level: 80 },
-        { name: 'GitHub Actions / Jenkins', level: 80 },
-        { name: 'CI/CD Pipelines', level: 85 }
+        { name: 'Google Cloud Platform', level: 50 },
+        { name: 'GitHub Actions / Jenkins', level: 30 },
+        { name: 'CI/CD Pipelines', level: 40 }
       ]
     },
     {
       name: 'Testing',
       skills: [
-        { name: 'JUnit / Mockito', level: 85 },
-        { name: 'Cucumber (Integration)', level: 75 },
-        { name: 'TDD', level: 80 }
+        { name: 'JUnit', level: 60 },
+        { name: 'Mockito', level: 40 },
+        { name: 'Cucumber (Integration)', level: 40 },
+        { name: 'Postman', level: 80 },
       ]
     }
   ];

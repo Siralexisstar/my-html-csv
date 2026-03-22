@@ -10,24 +10,23 @@ export const About = () => {
           <div className="about__bio">
             <h3 className="about__subheading">Biography</h3>
             <p>
-              Hi, I'm Alejandro. Originally from Barcelona. I am a versatile Software Engineer with a passion for building
-              fully integrated digital solutions.
-              Originally starting in systems and backend engineering,
-              I've expanded my expertise across the entire stack—delivering resilient microservices and engaging React-based frontends.
+              Hi, I’m Alejandro, a Software Engineer based in Barcelona.
+              I specialize in building scalable, end-to-end digital solutions, with a strong foundation in backend engineering and a growing focus on modern frontend development.
+              Over time, I’ve evolved into a full-stack engineer, designing and delivering resilient microservices, cloud-based architectures, and intuitive React applications that work seamlessly together.
+              My approach combines performance, scalability, and clean architecture to create systems that are both reliable and user-focused.
             </p>
             <p>
-              Beyond my daily professional work, my passion for technology drives me to constantly innovate, study, and learn.
-              I am always striving to stay up to date with the latest technologies, frameworks, and architectural patterns to continuously evolve as an engineer.
+              I’m driven by continuous learning and a strong curiosity for technology. I constantly explore new tools, frameworks, and architectural patterns to improve how systems are built and delivered.
             </p>
           </div>
           <div className="about__interests">
             <h3 className="about__subheading">Lifestyle & Interests</h3>
             <p>
-              Outside of programming, I dedicate a massive part of my free time to sports, specifically <strong>CrossFit</strong>.
-              Training hard and competing is more than just a hobby—it's a lifestyle that strengthens my mindset. It helps me stay ambitious, disciplined, and perseverant in chasing both my professional and personal goals.
+              Outside of engineering, I dedicate a big part of my life to <strong>CrossFit</strong>.
+              Training and competing is more than a hobby, it's a mindset that reinforces discipline, resilience, and consistency, values I also bring into my professional work.
             </p>
             <p>
-              When I need to disconnect from the daily grind, there's nothing I enjoy more than spending quality time with my dog, going to the beach, and taking long outdoors walks to reset my mind.
+              I enjoy disconnecting through simple but meaningful moments: spending time with my dog, going to the beach, and long outdoor walks that help me reset and stay focused.
             </p>
           </div>
         </div>

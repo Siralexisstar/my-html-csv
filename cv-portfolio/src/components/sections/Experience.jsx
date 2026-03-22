@@ -24,9 +24,9 @@ export const Experience = () => {
           duration: 'May 2024 - Mar 2026',
           location: 'Sant Cugat del Vallès, Catalonia, Spain',
           description: [
-            '**Architected and led the complete DART reporting migration** to a modern, cloud-native GCP architecture.',
-            'Designed and deployed Java microservices for complex banking recalculations, transforming massive data pipelines from Oracle to BigQuery.',
-            'Built event-driven ETL pipelines (Dataflow, Pub/Sub) and established robust CI/CD workflows utilizing GitHub Actions and Jenkins.',
+            '**Participated in the design of the complete DART reporting migration** to a modern, cloud-native GCP architecture.',
+            'Design and implementation of Java microservices for complex banking recalculations, transforming massive data pipelines from Oracle to BigQuery.',
+            'Design and implementation of event-driven ETL pipelines (Dataflow, Pub/Sub) and established robust CI/CD workflows utilizing GitHub Actions and Jenkins.',
             'Drove frontend modernization by building a React-based UI, ensuring pristine code quality through comprehensive unit, integration, and E2E testing.'
           ],
           technologies: ['GCP', 'Java', 'Spring Boot', 'React', 'Oracle', 'BigQuery', 'GitHub Actions']
