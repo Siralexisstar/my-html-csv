@@ -6,7 +6,7 @@ export const Experience = () => {
   const experiences = [
     {
       company: 'GFT for Deutsche Bank',
-      src: '/images/gft.png',
+      logo: '/images/gft.png',
       roles: [
         {
           id: 'gft-l3',
@@ -56,7 +56,7 @@ export const Experience = () => {
     },
     {
       company: 'GFT Group',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/GFT_Technologies_logo.svg/1200px-GFT_Technologies_logo.svg.png',
+      logo: '/images/gft.png',
       roles: [
         {
           id: 'gft-l1-2',
@@ -83,6 +83,7 @@ export const Experience = () => {
     },
     {
       company: 'ADTEL',
+      logo: '/images/adtel.png',
       initials: 'AD',
       color: '#ef4444',
       roles: [

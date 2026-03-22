@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Section } from '../layout/Section';
 import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
@@ -8,26 +8,42 @@ export const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A blazing fast, responsive online store built with React, Vite, and modern CSS.',
-      tech: ['React', 'Vite', 'CSS Modules'],
-      link: '#',
+      title: 'URBANSTORE E-COMMERCE',
+      description: 'A feature-rich e-commerce platform developed for Coderhouse certification. Implemented dynamic product catalogs, secure checkout simulations, and state management using React Context and Hooks.',
+      tech: ['React', 'Vite', 'CSS Modules', 'JavaScript', 'Context API'],
+      link: 'https://github.com/Siralexisstar/React-Store-Certification',
     },
     {
       id: 2,
-      title: 'Dashboard App',
-      description: 'Analytics dashboard featuring complex data visualization and real-time updates.',
-      tech: ['React', 'Chart.js', 'REST API'],
-      link: '#',
+      title: 'CSV-TO-WEB DATA VIEWER',
+      description: 'UI to visualize CSV in a web page using Antigravity and other tools to improve the UI. Optimized for speed and responsiveness, and deployed as a serverless application on Vercel.',
+      tech: ['React', 'Vite', 'Vercel', 'TypeScript', 'CSV Parsing'],
+      link: 'https://github.com/Siralexisstar/my-html-csv',
     },
     {
       id: 3,
-      title: 'Portfolio V1',
-      description: 'My previous portfolio focusing on animations and creative layouts.',
-      tech: ['HTML', 'SASS', 'Vanilla JS'],
+      title: 'HEXAFLOW ENGINE (IN PROGRESS)',
+      description: 'A cutting-edge reactive microservice architected with Spring Boot WebFlux. Employs Hexagonal Architecture and Domain-Driven Design (DDD) to handle massive asynchronous data pipelines, integrated with MongoDB.',
+      tech: ['Spring Boot', 'WebFlux', 'Hexagonal Architecture', 'DDD', 'MongoDB'],
       link: '#',
     }
   ];
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const cards = document.querySelectorAll('.projects__card');
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
   return (
     <Section id="projects" title="Featured Projects">
