@@ -40,6 +40,21 @@ export const Hero = () => {
           <div className="hero__actions">
             <Button as="a" href="#contact" variant="primary" size="lg">Get in touch</Button>
             <Button as="a" href="#projects" variant="outline" size="lg">View work</Button>
+            <Button
+              as="button"
+              variant="outline"
+              size="lg"
+              className="hero__pdf-btn"
+              onClick={() => window.print()}
+              title="Download CV as PDF"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight:'6px',verticalAlign:'middle'}}>
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              PDF
+            </Button>
           </div>
         </div>
         <div className="hero__image-container">
