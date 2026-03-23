@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export const RadarChart = ({ data, size = 300 }) => {
   const [animatedData, setAnimatedData] = useState(data.map(d => ({ ...d, value: 0 })));
-  
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setAnimatedData(data);
@@ -107,7 +107,7 @@ export const RadarChart = ({ data, size = 300 }) => {
               textAnchor="middle"
               dominantBaseline="middle"
               fill="var(--color-text-muted)"
-              fontSize="12"
+              fontSize="10"
               fontFamily="var(--font-mono)"
               style={{ textTransform: 'uppercase', letterSpacing: '1px' }}
             >
